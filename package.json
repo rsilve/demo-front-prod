@@ -1,6 +1,11 @@
 {
   "name": "demo-front-prod",
   "version": "1.0.0",
-  "dependencies": {
+  "scripts": {
+    "serve": "wds -r src --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@web/dev-server": "^0.1.28"
   }
 }
