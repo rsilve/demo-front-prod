@@ -1,4 +1,4 @@
 
 const hello = document.createElement('span')
-hello.innerText = `${new Date().toLocaleString()} - Hello`
+hello.innerText = `[v0] ${new Date().toLocaleString()} - Hello`
 document.getElementById("main").appendChild(hello);

@@ -3,6 +3,8 @@ image:
 
 tasks:
   - init: npm install
+    command: nginx -g "daemon off;"
 
 ports:
   - port: 8000
+  - port: 80
