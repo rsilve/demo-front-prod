@@ -6,5 +6,4 @@ tasks:
     command: nginx -g "daemon off;"
 
 ports:
-  - port: 8000
-  - port: 80
+  - port: 8002

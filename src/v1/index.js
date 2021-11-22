@@ -1,3 +1,3 @@
-import {hello} from "./hello";
+import {hello} from "./lib/hello_goodbye";
 
 hello()

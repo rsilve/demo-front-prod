@@ -4,8 +4,10 @@
   "scripts": {
     "serve": "wds -r src --watch",
     "build:v0": "mkdir -p dist && cp -r src/v0 dist",
-    "build:v1": "./node_modules/.bin/esbuild --bundle src/v1/index.js --outdir=dist/v1 && cp src/v1/*.html dist/v1/",
-    "deploy": "./deploy.sh"
+    "build:v1": "./node_modules/.bin/esbuild --bundle --platform=browser --outdir=dist/v1 src/v1/*.js && cp src/v1/*.html dist/v1/",
+    "build": "npm run build:v0 && npm run build:v1",
+    "deploy": "./deploy.sh",
+    "clean": "sudo rm -rf public/* dist"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.28",
