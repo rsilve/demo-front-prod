@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "serve": "wds -r src --watch",
-    "build:index": "mkdir -p dist && cp -r src/index.html dist",
-    "build:v0": "mkdir -p dist && cp -r src/v0 dist",
-    "build:v1": "./node_modules/.bin/esbuild --bundle --platform=browser --outdir=dist/v1 src/v1/*.js && cp src/v1/*.html dist/v1/",
-    "build": "npm run build:v0 && npm run build:v1",
-    "deploy": "npm run build:index && ./deploy.sh",
+    "build": "./build.sh",
+    "deploy": "./deploy.sh",
     "clean": "sudo rm -rf public/* dist"
   },
   "devDependencies": {
