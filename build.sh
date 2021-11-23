@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+source .env
+
+
 mkdir -p dist
 
 echo "build index"
@@ -12,4 +15,4 @@ echo "build v1"
 mkdir -p dist && cp -r src/v1 dist
 
 echo "build v2"
-./node_modules/.bin/esbuild --bundle --platform=browser --define:process.env.NODE_ENV=\"dev\" --outdir=dist/v2 src/v2/*.js && cp src/v2/*.html dist/v2/
+./node_modules/.bin/esbuild --bundle --platform=browser --define:NODE_ENV=\"${ENV}\" --outdir=dist/v2 src/v2/*.js && cp src/v2/*.html dist/v2/
