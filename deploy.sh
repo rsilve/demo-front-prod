@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 mkdir -p public
+rm -rf public/*
 sudo cp -rv dist/* $PWD/public
 
 URL=$(gp url 8002)
